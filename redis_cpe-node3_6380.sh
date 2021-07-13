@@ -2,7 +2,7 @@
 
 #Date: 2019Sep20
 #Purpose: Email output of CPE count less than value
-
+#This is redis
 VALUE=$(/usr/local/bin/redis-cli -h 10.0.1.117 -p 6380 keys cpe:* | wc -l)
 
 	if [ "$VALUE" -le 1000 ]; then
